@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title></title>  
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="utf-8"/>
+		<script type="text/javascript">
+			function setAppointHover(inputId){
+				var input=document.getElementById(inputId);
+				input.value="已预约";
+				input.className="btnAppoint btnAppointHover";
+			}
+		</script>
+		<style>
+		    body{
+				margin:0;
+				padding:0;
+				background-color:#F2F2F2;
+			}
+			.topDiv{
+				width:100%;
+				background-color:#ffffff;
+				font-size:18px;
+				position:fixed;
+				margin-top:-5px;
+				padding-top:10px;
+				padding-bottom:10px;
+				border-bottom:1px solid #EBE7E4;
+				z-index:1;
+			}
+			.content{
+				position:absolute;
+				width:100%;
+				z-index:0;
+				top:50px;
+			}
+			.item{
+				width:auto;
+				margin:5px 5px 0 5px;
+				border:1px solid #EBE7E4;
+				text-align:center;
+				color:#666666;
+				font-size:16px;
+			}
+			.comBorder{
+				width:100%;
+				border-bottom:1px solid #EBE7E4;
+				background-color:#FFFFFF;
+			}
+			.item img{
+				max-height:200px;
+				vertical-align:bottom;//去除下边界空隙
+			}
+			.centerCon{
+			    padding-top:10px;
+				padding-bottom:10px;
+
+			}
+			.bottomLeft{
+				float:left;
+				width:49.9%;
+				height: 30px;
+				line-height:30px;
+				border-right:1px solid #EBE7E4;
+				padding:5px 0 5px 0;
+				
+			}
+			.bottomRight{
+				width:49.9%;
+				float:left;
+				padding:5px 0 5px 0;
+			}
+			.btnAppoint{
+				border:0;
+				width: 80px;
+				color: #FFFFFF;
+				background: #FF4400;
+				height: 30px;
+			}
+			.btnAppointHover{
+				background: #FFA54F;
+			}
+			table{
+				width:100% height:100%;padding:0;
+				cellpadding:0;
+				cellspacing:0;
+			}
+		</style>
+    </head>  
+    <body> 
+	    <div class="topDiv" >
+			<label style="float:left;margin-left:5px;margin-top:5px;">预约抽奖</label>
+			<input type="button" class="btnAppoint" style="float:right;margin:0.1px 5px 0 0;" value="参与游戏"/>
+		</div>
+        <div class="content">
+			<div class="item">
+				<img class="comBorder" src="./images/t17.png"/>
+				<div class="comBorder centerCon">【临安好味道】，邀请你玩游戏，抽大奖</div>
+				<div style="background-color:#FFFFFF;">
+					<table  class="comBorder">
+						<tr>
+							<td style="border-right:1px solid #EBE7E4;">人数10000</td>
+							<td><input id="test" type="button" class="btnAppoint" value="预约" onclick="setAppointHover('test')"/></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<!--商品遍历-->
+			<div class="item">
+				<table  class="comBorder">
+					<tr>
+						<td rowspan="2" width="40%" style="border-right:1px solid #EBE7E4;">
+							<img class="comBorder " src="./images/t6.png"/>
+						</td>
+						<td colspan="2" style="border-bottom:1px solid #EBE7E4;padding:10px 0 10px 0;">
+							<div>【on@dream】特约赞助</div>
+							<div>换取积分：1000</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #EBE7E4;">人数1000</td>
+						<td><input type="button" class="btnAppoint" value="预约"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table class="comBorder"  >
+					<tr>
+						<td rowspan="2" width="40%" style="border-right:1px solid #EBE7E4;">
+							<img class="comBorder " src="./images/t7.png"/>
+						</td>
+						<td colspan="2" style="border-bottom:1px solid #EBE7E4;padding 10px 0 10px 0;">
+							<div>【御水坊】特约赞助</div>
+							<div>换取积分：2000</div>
+						</td>
+					</tr>
+					<tr style="height:5px;">
+						<td style="border-right:1px solid #EBE7E4;">人数420</td>
+						<td><input type="button" class="btnAppoint btnAppointHover" value="已预约"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table  class="comBorder">
+					<tr>
+						<td rowspan="2" width="40%" style="border-right:1px solid #EBE7E4;">
+							<img class="comBorder " src="./images/t9.png"/>
+						</td>
+						<td colspan="2" style="border-bottom:1px solid #EBE7E4;padding:10px 0 10px 0;">
+							<div>【马库斯】特约赞助</div>
+							<div>换取积分：500</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #EBE7E4;">人数3400</td>
+						<td><input type="button" class="btnAppoint" value="预约"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table  class="comBorder">
+					<tr>
+						<td rowspan="2" width="40%" style="border-right:1px solid #EBE7E4;">
+							<img class="comBorder " src="./images/t16.png"/>
+						</td>
+						<td colspan="2" style="border-bottom:1px solid #EBE7E4;padding:10px 0 10px 0;">
+							<div>【马库斯】特约赞助</div>
+							<div>换取积分：500</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #EBE7E4;">人数3400</td>
+						<td><input type="button" class="btnAppoint" value="预约"/></td>
+					</tr>
+				</table>
+			</div>
+			<div class="item">
+				<table  class="comBorder">
+					<tr>
+						<td rowspan="2" width="40%" style="border-right:1px solid #EBE7E4;">
+							<img class="comBorder " src="./images/t12.png"/>
+						</td>
+						<td colspan="2" style="border-bottom:1px solid #EBE7E4;padding:10px 0 10px 0;">
+							<div>【马库斯】特约赞助</div>
+							<div>换取积分：500</div>
+						</td>
+					</tr>
+					<tr>
+						<td style="border-right:1px solid #EBE7E4;">人数3400</td>
+						<td><input type="button" class="btnAppoint" value="预约"/></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+    </body>  
+</html>  

@@ -1,0 +1,50 @@
+10
+
+dir
+17
+svn://www.svn999.com/bncq2015.Bncq_ts/Android/bncq/src/com/bncq
+svn://www.svn999.com/bncq2015.Bncq_ts
+
+
+
+2015-04-05T16:20:25.717760Z
+17
+ljzdyh
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d77473dd-a568-4d6a-92ca-86e514b6facb
+
+
+
+
+
+
+0
+
+common
+dir
+
+controller
+dir
+
+dao
+dir
+
+model
+dir
+
+service
+dir
+

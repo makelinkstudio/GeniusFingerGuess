@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+<!-- 左边距 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="17.5" >
+    </LinearLayout>
+<!--中间 内容-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65"
+        android:orientation="vertical" >
+        <!-- 头部图片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="57"
+            android:orientation="vertical" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="50dp"
+                android:layout_weight="7"
+                android:src="@drawable/login_logo" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/login_name" />
+        </LinearLayout>
+        
+        <!-- 主体登录内容 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43"
+            android:orientation="vertical" >
+            <!-- 账号 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:background="@drawable/tab_border_style"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_user" 
+                     android:textSize="@dimen/text_content"/>
+                <EditText
+                    android:id="@+id/edtUserCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+            </LinearLayout>
+            
+            <!-- 密码 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:background="@drawable/tab_border_style"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_passwd" 
+                    android:textSize="@dimen/text_content"/>
+                <EditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+            
+            <!-- 记住密码 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.7"
+                android:background="@drawable/tab_border_style" >
+                <TextView
+                    android:id="@+id/tvw_login_remPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/login_remindPasswd" 
+                     android:textColor="@color/text_color"
+                     android:textSize="@dimen/text_content"/>
+                <CheckBox
+                    android:id="@+id/cbx_login_remPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tvw_login_remPass"
+                    android:checked="true" />
+                <TextView
+                    android:id="@+id/tvw_login_lossPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/login_lossPasswd" 
+                    android:textColor="@color/text_color"
+                     android:textSize="@dimen/text_content"/>
+            </RelativeLayout>
+            
+            <!-- 登录按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.2"
+                android:gravity="top|center_horizontal" >
+                <Button
+                    android:id="@+id/btn_login_Login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_login" 
+                    style="@style/btn_login_style"
+                    android:background="@drawable/btn_login_style"/>
+            </LinearLayout>
+            
+            <!-- 注册 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.8"
+                android:gravity="top|center_horizontal" >
+                <TextView
+                    android:id="@+id/tvw_login_register"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_register" 
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+<!-- 右边距 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="17.5" >
+    </LinearLayout>
+
+</LinearLayout>

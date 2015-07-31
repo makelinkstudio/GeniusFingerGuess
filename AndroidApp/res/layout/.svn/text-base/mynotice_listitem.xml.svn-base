@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:orientation="vertical" 
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/grey">
+    
+	<TextView 
+	    android:id="@+id/tvw_notice_time"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center_horizontal"
+	    android:text="dd"
+	    />
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:paddingTop="10dp"
+	    android:paddingLeft="10dp"
+    	android:paddingRight="10dp"
+    	android:paddingBottom="10dp"
+	    android:background="@color/white">
+	    <TextView 
+	         android:id="@+id/tvw_notice_title"
+	        android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:layout_gravity="center_horizontal"
+	    	android:layout_marginBottom="10dp"
+	    	android:textSize="18dp"
+	    	android:textColor="@color/black"
+	    	android:text="dddd"/>
+	   <TextView 
+	        android:id="@+id/tvw_notice_con"
+	        android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:textColor="@color/contentColor"
+	    	android:text="dddd"/>
+	</LinearLayout>
+</LinearLayout>

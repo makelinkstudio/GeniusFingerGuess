@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bncq"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-sdk  android:minSdkVersion="14"/>
+    <!-- 设置屏幕兼容性 -->
+    <supports-screens 
+            android:largeScreens="true"  
+            android:normalScreens="true"
+             android:anyDensity="true" />
+   <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name=".common.MainApplication">
+        <!-- 服务 -->
+         <service android:name=".service.MessageService" android:label="消息推送" />
+         <!-- 主体activity -->
+        <activity
+            android:name=".controller.MainActivity"
+            android:label="@string/app_name" 
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".controller.LoginActivity"  android:screenOrientation="portrait"></activity>
+         <activity android:name=".controller.RegisterActivity"  android:screenOrientation="portrait"></activity>
+         <!-- 商城 -->
+         <activity android:name=".controller.ShopDetailActivity"  android:screenOrientation="portrait"></activity>
+         <activity android:name=".controller.ShopItemIndexActivity"  android:screenOrientation="portrait"></activity>
+         <!-- 社区 -->
+         <activity android:name=".controller.TopicDetailActivity"  android:screenOrientation="portrait"></activity>
+         <activity android:name=".controller.ReleaseActivity"  android:screenOrientation="portrait"></activity>
+         <!-- 中心-->
+         <activity android:name=".controller.EditorMyInfoActivity"  android:screenOrientation="portrait"></activity>
+         <activity android:name=".controller.AboutSoftwareActivity"  android:screenOrientation="portrait"></activity>
+         
+         <!-- Bnjz -->
+         <activity android:name=".controller.Bnjz_MainActivity"  android:screenOrientation="portrait"></activity>
+    </application>
+
+</manifest>

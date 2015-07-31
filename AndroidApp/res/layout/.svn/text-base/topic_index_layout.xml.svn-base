@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   android:background="@color/listView_bg">
+ 	<!-- 话题内容list -->
+    <com.bncq.model.PullToRefreshListView 
+            android:id="@+id/lvw_topic"
+			style="@style/widget_listview"
+			  />
+      <!-- 底部回复 -->
+      <RelativeLayout 
+          android:id="@+id/rlt_topic_release"
+          android:layout_width="70dp"
+          android:layout_height="70dp"
+          android:background="@drawable/circle_shape"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_marginBottom="10dp"
+          android:layout_marginRight="10dp">
+          <!--
+	    <Button
+                android:id="@+id/btn_topic_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                
+                style="@style/btn_cq_style"
+                android:textSize="@dimen/text_content" />  -->
+	        <ImageView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:src="@drawable/bao_left"/>
+        </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <RelativeLayout 
+        android:layout_width="match_parent"
+         android:layout_height="50dip"
+         android:paddingLeft="5dp"
+         android:paddingRight="5dp"
+        android:background="@drawable/top_border_style" 
+        >
+	        <ImageButton 
+		   		android:id="@+id/ibtn_shopDet_back"
+			   	android:layout_width="wrap_content" 
+			   	android:layout_height="fill_parent" 
+			   	android:src="@drawable/header_back"/>
+		   	<TextView 
+		   	    android:id="@+id/tvw_shop_share"
+		   	    android:layout_width="wrap_content"
+		   	    android:layout_height="wrap_content"
+		   	    android:layout_centerVertical="true"
+		   		android:layout_alignParentRight="true"
+		   	    android:textColor="@color/gloden"
+                android:textSize="@dimen/text_content" 
+		   		android:text="@string/share"/>
+    </RelativeLayout>
+	  <!-- 图片 -->
+      <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40">
+            <TextView
+                    android:id="@+id/tvw_shop_avdId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/ivw_shop_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/jian_left" />
+                <ProgressBar 
+                    android:id="@+id/pbr_shop_probar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    />
+      </RelativeLayout>
+    <!-- 文字 内容 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="12"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:orientation="vertical" 
+             android:gravity="center_vertical">
+                 <LinearLayout 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:orientation="vertical">
+                    <TextView
+                    android:id="@+id/tvw_shop_businName"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ddd"
+                    android:textColor="@color/black" />
+                      <TextView
+                        android:id="@+id/tvw_shop_integral"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shop_integral" 
+                         android:textColor="@color/black" />
+                </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/tvw_shop_name"
+                    style="@style/text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ddd" 
+                    android:textColor="@color/gloden"/>
+                 <TextView
+                        android:id="@+id/tvw_shop_endTime"
+                        style="@style/text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/shop_endTime" 
+                        android:textColor="@color/black"/>      
+        </LinearLayout>
+        <!-- 横线 -->
+	 <LinearLayout 
+				       android:layout_width="match_parent"
+				       android:layout_height="0.5dp"
+				       android:layout_weight="0"
+				       android:background="@color/tab_border">
+				   </LinearLayout>
+        <!-- 预约  收藏 -->
+         <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                     android:layout_weight="6"
+                     android:orientation="horizontal"
+                     android:gravity="center">
+                 <TextView
+                        android:id="@+id/tvw_shop_appoint"
+                        android:layout_width="0dp"
+                         android:layout_weight="1"
+                        android:layout_height="match_parent"
+                          android:gravity="center"
+                        android:text="@string/shop_appoint"
+                        style="@style/text_style"
+                        android:textColor="@color/shopApp_color" />
+                 <LinearLayout 
+				       android:layout_width="0.5dp"
+				       android:layout_height="match_parent"
+				       android:layout_weight="0"
+				       android:background="@color/tab_border">
+				   </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvw_shop_collect"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        style="@style/text_style"
+                        android:text="@string/shop_collect"
+                        android:textColor="@color/shopCollect_color" />
+                 <LinearLayout 
+				       android:layout_width="0.5dp"
+				       android:layout_height="match_parent"
+				       android:layout_weight="0"
+				       android:background="@color/tab_border">
+                       </LinearLayout>
+                     <TextView
+                        android:id="@+id/tvw_shop_buy"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        style="@style/text_style"
+                        android:text="@string/shop_buy"
+                        android:textColor="@color/gloden" />
+                </LinearLayout>
+                   <LinearLayout 
+				       android:layout_width="match_parent"
+				       android:layout_height="0dp"
+				       android:layout_weight="10"
+				       android:background="@color/tab_border">
+                       </LinearLayout>
+</LinearLayout>

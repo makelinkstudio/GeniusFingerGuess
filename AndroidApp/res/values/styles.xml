@@ -1,0 +1,173 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowActionBar">false</item>
+  		<item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- listview style -->
+   <style name="widget_listview">
+        <item name="android:layout_width">fill_parent</item>
+   		<item name="android:layout_height">fill_parent</item>
+       	<item name="android:layout_weight">1</item>   	   	
+         <item name="android:scrollbars">none</item>
+         <item name="android:divider">@color/listView_bg</item>
+       	<item name="android:dividerHeight">10dp</item>
+       	<item name="android:fadingEdge">none</item>
+       	<item name="android:scrollingCache">false</item>
+    </style>
+   <style name="loading_small" parent="@android:style/Widget.ProgressBar.Small">
+		<item name="android:indeterminateDrawable">@animator/loading</item>
+		<item name="android:layout_width">21dip</item> 
+		<item name="android:layout_height">21dip</item>
+		<item name="android:layout_gravity">center_vertical</item>
+	</style> 
+	<!-- 猜拳 -->
+	<style name="btn_cq_style">
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:textSize">@dimen/text_content</item>
+	    <item name="android:background">@color/cqbtn_color</item>
+	</style>
+	 <style name="popupWindowAnimation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@animator/enter</item>
+        <item name="android:windowExitAnimation">@animator/exit</item>
+    </style>
+	<!-- 登录 -->
+    <style name="btn_login_style">
+	    <item name="android:textColor">@color/btn_login_color</item>
+	    <item name="android:textSize">@dimen/text_content</item>
+	    <item name="android:background">@color/white</item>
+	</style>
+	<!-- 商城 -->
+	<style name="text_style">
+	    <item name="android:textColor">#999999</item>
+	    <item name="android:textSize">@dimen/text_min</item>
+	</style>
+    <!-- 社区-->
+	<style name="topic_title_style">
+	    <item name="android:textColor">@color/gloden</item>
+	    <item name="android:textSize">@dimen/text_content</item>
+	</style>
+		<style name="topic_con_style">
+	    <item name="android:textColor">@color/topicCont_color</item>
+	    <item name="android:textSize">@dimen/text_content</item>
+	</style>
+	<style name="topic_time_style">
+	    <item name="android:textColor">@color/topicCont_color</item>
+	    <item name="android:textSize">@dimen/text_min</item>
+	</style>
+	<!--Bnjz  -->
+	<!-- 格子样式 -->
+    <style name="gird_cell">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/gird_cell</item>
+    </style>
+    <!-- 出拳样式 -->
+    <style name="punch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/punch_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/punch_iron_margin_left</item>
+    </style>
+    <!-- 等级背景颜色 -->
+    <style name="level">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="l1_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/matrix_cell_l1</item>
+    </style>
+    <style name="l2_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/matrix_cell_l2</item>
+    </style>
+    <style name="l3_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/matrix_cell_l3</item>
+    </style>
+    <style name="l4_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/matrix_cell_l4</item>
+    </style>
+    <style name="l5_background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@drawable/matrix_cell_l5</item>
+    </style>
+    <!-- 等级iron -->
+    <style name="level_iron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/level_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/level_iron_margin_left</item>
+    </style>
+    <style name="leve_none">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="l1_iron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/level_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/level_iron_margin_left</item>
+        <item name="android:background">@drawable/one</item>
+    </style>
+    <style name="l2_iron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/level_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/level_iron_margin_left</item>
+        <item name="android:background">@drawable/two</item>
+    </style>
+    <style name="l3_iron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/level_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/level_iron_margin_left</item>
+        <item name="android:background">@drawable/three</item>
+    </style>
+    <style name="l4_iron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/level_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/level_iron_margin_left</item>
+        <item name="android:background">@drawable/four</item>
+    </style>
+    <style name="l5_iron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/level_iron_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/level_iron_margin_left</item>
+        <item name="android:background">@drawable/five</item>
+    </style>
+</resources>

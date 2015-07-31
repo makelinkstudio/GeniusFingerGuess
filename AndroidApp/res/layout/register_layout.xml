@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal" >
+
+    <!-- 左边距 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="17.5" >
+    </LinearLayout>
+    
+    <!-- 中间 内容 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="65"
+        android:orientation="vertical" >
+
+        <!-- 头部图片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="57"
+            android:orientation="vertical" >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="50dp"
+                android:layout_weight="7"
+                android:src="@drawable/login_logo" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:src="@drawable/login_name" />
+        </LinearLayout>
+        
+        <!-- 主体登录内容 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="43"
+            android:orientation="vertical" >
+
+            <!-- 账户 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                 android:layout_weight="1.4"
+                 android:gravity="center_vertical"
+                android:background="@drawable/tab_border_style"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_user" 
+                     android:textSize="@dimen/text_content"/>
+                <EditText
+                    android:id="@+id/edt_register_user"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+            </LinearLayout>
+            
+            <!-- 邮箱 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                 android:layout_weight="1.4"
+                 android:gravity="center_vertical"
+                android:background="@drawable/tab_border_style"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_email" 
+                     android:textSize="@dimen/text_content"/>
+                <EditText
+                    android:id="@+id/edt_register_email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null" />
+            </LinearLayout>
+            
+            <!-- 密码 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                 android:layout_weight="1.4"
+                 android:gravity="center_vertical"
+                android:orientation="horizontal" 
+                android:background="@drawable/tab_border_style">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_passwd" 
+                     android:textSize="@dimen/text_content"/>
+                <EditText
+                    android:id="@+id/edt_register_passwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+            
+            <!-- 确认密码 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" 
+                android:background="@drawable/tab_border_style">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_passwd_again" 
+                    android:textSize="@dimen/text_content"/>
+                <EditText
+                    android:id="@+id/edt_register_passwd_again"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+            
+            <!-- 注册按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2.4"
+                android:gravity="center" 
+                android:background="@drawable/tab_border_style">
+                <Button
+                    android:id="@+id/btn_register_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_register" 
+                    style="@style/btn_login_style"
+                    android:background="@drawable/btn_login_style"/>
+            </LinearLayout>
+
+            <!--返回登录-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tvw_register_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_horizontal"
+                    android:text="@string/register_back" 
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/text_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 右边距 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="17.5" >
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@color/white">
+      <!-- 上边距 -->
+   <LinearLayout 
+            android:id="@+id/llt_main_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4">
+            <TextView android:layout_width="0dp"
+            android:layout_height="0dp" android:visibility="gone"/>
+    </LinearLayout>
+    <!-- 顶部个人信息 -->
+   <LinearLayout 
+            android:id="@+id/llt_main_userInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.7"
+            android:orientation="vertical"
+            android:gravity="top|center_horizontal"
+            android:background="@color/top_color">
+            <TextView 
+                android:id="@+id/tvw_cq_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_color_show"
+                android:text="@string/login_no_login"
+                android:textSize="@dimen/text_large"
+                />
+          <TextView 
+                android:id="@+id/tvw_cq_userInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tab_color"
+                 android:textSize="@dimen/text_min"
+                />
+        <LinearLayout 
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+              <TextView 
+                  android:id="@+id/tvw_jifen"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/cq_jifen"
+                  android:textColor="@color/tab_color"
+                 android:textSize="@dimen/text_min"/>
+              <RelativeLayout 
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content">
+               <TextView 
+                android:id="@+id/tvw_cq_userJF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                android:textColor="@color/tab_color"
+                android:textSize="@dimen/text_min" 
+                android:text="222"/>
+                
+           </RelativeLayout>
+           <TextView 
+                  android:id="@+id/tvw_jingyan"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="@color/tab_color"
+                 android:textSize="@dimen/text_min"
+                 android:text="经验"/>
+                <TextView 
+                android:id="@+id/tvw_cq_userJF_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                android:textColor="@color/tab_color"
+                android:textSize="@dimen/text_min" 
+                android:text="-10"/>
+          </LinearLayout>
+         
+    </LinearLayout>
+    <!-- 中间内容 -->
+	<FrameLayout 
+	    android:id="@+id/content"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="40.9">
+	</FrameLayout>
+	<!-- 底部导航栏 -->
+	<LinearLayout 
+	    android:id="@+id/llt_bottom_layout"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="4"
+	    android:background="@drawable/tab_border_style"
+	    >
+	    <!--游戏 -->
+	    <RelativeLayout 
+	        android:id="@+id/caiquan_layout"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1">
+	        
+	       <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:orientation="vertical">
+	            <TextView 
+	                android:id="@+id/caiquan_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:text="@string/tab_caiquan"
+	                android:textColor="@color/tab_color"
+	                  android:textSize="@dimen/text_min"/>
+	        </LinearLayout>
+	    </RelativeLayout>
+	    <!-- 商城 -->
+	    <RelativeLayout 
+	        android:id="@+id/shop_layout"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1">
+	        
+	       <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:orientation="vertical">
+
+	            <TextView 
+	                android:id="@+id/shop_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:text="@string/tab_shop"
+	                android:textColor="@color/tab_color"
+	                  android:textSize="@dimen/text_min"/>
+	        </LinearLayout>
+	    </RelativeLayout>
+	    <!--发现 -->
+	    <RelativeLayout 
+	        android:id="@+id/topic_layout"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1">
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:orientation="vertical">
+
+	            <TextView 
+	                android:id="@+id/topic_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:text="@string/tab_found"
+	                android:textColor="@color/tab_color"
+	                  android:textSize="@dimen/text_min"/>
+	        </LinearLayout>
+	    </RelativeLayout>
+	    <!--我的 -->
+	    <RelativeLayout 
+	        android:id="@+id/setting_layout"
+	        android:layout_width="0dp"
+	        android:layout_height="match_parent"
+	        android:layout_weight="1">
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:orientation="vertical">
+
+	            <TextView 
+	                android:id="@+id/setting_text"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_horizontal"
+	                android:text="@string/tab_myInfo"
+	                android:textColor="@color/tab_color"
+	                android:textSize="@dimen/text_min"/>
+	        </LinearLayout>
+	    </RelativeLayout>
+	</LinearLayout>
+	
+</LinearLayout>

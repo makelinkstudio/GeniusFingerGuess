@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:orientation="horizontal"
+    android:background="@color/topic_DetailCont_color">
+     <!-- 左边距 -->
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.8"></LinearLayout>
+   <!-- 中间 -->
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="92.4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+		<RelativeLayout 
+		  	    android:id="@+id/lt3"
+		  	    android:layout_width="match_parent"
+		  	    android:layout_height="wrap_content"
+		  	    android:layout_marginBottom="10dp"
+		  	    android:orientation="horizontal">
+			  	    <TextView
+			  	     android:id="@+id/tvw_topicDet_RepMan"
+		    		android:layout_width="wrap_content" 
+		           	android:layout_height="wrap_content" 
+	        	    android:includeFontPadding="false"
+		           	style="@style/topic_title_style"
+		            android:text="发哥"/>
+		       	<TextView
+		       	    android:id="@+id/tvw_topic_reply_layer"
+		    		android:layout_width="wrap_content" 
+		           	android:layout_height="wrap_content" 
+		           	android:layout_alignParentRight="true"
+		           	android:includeFontPadding="false"
+		           	android:textSize="@dimen/text_min_s"
+		            android:textColor="@color/topicCont_color"
+		            android:text="回复"/>       	
+		  	</RelativeLayout>
+		  	   	<TextView
+		  	   	    android:id="@+id/tvw_topicDet_RepCon"
+		    		android:layout_width="wrap_content" 
+		           	android:layout_height="wrap_content"
+		           	android:layout_marginBottom="10dp"
+		            style="@style/topic_con_style"
+		           	android:text="哪里塞车？ " />
+		 <TextView 
+			  	    android:id="@+id/tvw_topicDet_RepTime"
+		    		android:layout_width="wrap_content"
+		           	android:layout_height="wrap_content" 
+	        	    android:includeFontPadding="false"
+		            style="@style/topic_time_style"
+		            android:text="1小时前"/>
+ 	</LinearLayout>
+ 	   <!-- 右边距 -->
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.8"></LinearLayout>
+</LinearLayout>

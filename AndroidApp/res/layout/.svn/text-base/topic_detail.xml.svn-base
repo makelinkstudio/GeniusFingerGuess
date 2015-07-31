@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBE7E4" 
+    android:clickable="true">
+<!-- 头部 -->
+    <RelativeLayout
+        android:id="@+id/top_ret1"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/top_border_style" >
+
+        <ImageButton
+            android:id="@+id/ibtn_topicDet_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:src="@drawable/header_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dip"
+            android:singleLine="true"
+            android:text="@string/topic_Det_more"
+            android:textColor="@color/contentColor"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <!-- 回复内容 -->
+    <com.bncq.model.PullToRefreshListView
+        android:id="@+id/lvw_topicDet_item"
+        style="@style/widget_listview"
+        android:layout_above="@+id/top_ret3"
+        android:layout_below="@id/top_ret1"
+        android:layout_marginTop="2dp"
+        android:divider="#E8E8E8"
+        android:dividerHeight="1dp"/>
+    <!-- 底部回复 -->
+<RelativeLayout
+        android:id="@+id/top_ret3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="#FFFFFF" >
+
+        <Button
+            android:id="@+id/btn_topicDet_rep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+             style="@style/btn_cq_style"
+            android:text="@string/topic_comment" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/btn_topicDet_rep">
+            <EditText
+                android:id="@+id/edt_topicDet_repCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/topic_reply_hint" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

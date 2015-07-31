@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/top_border_style">
+    <!-- 顶部tab分页 -->
+    	<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="0dp"
+		    android:layout_weight="4">
+	        <TextView
+	            android:id="@+id/tvw_cq_game"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:text="@string/cq_game"
+	            android:textColor="@color/tab_color_show"
+	            android:textSize="@dimen/text_min"/>
+	
+	        <TextView
+	            android:id="@+id/tvw_cq_rule"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:text="@string/cq_rule"
+	            android:textColor="@color/tab_color"
+	            android:textSize="@dimen/text_min"/>
+	
+	        <TextView
+	            android:id="@+id/tvw_cq_result"
+	            android:layout_width="fill_parent"
+	            android:layout_height="fill_parent"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:text="@string/cq_result"
+	            android:textColor="@color/tab_color"
+	            android:textSize="@dimen/text_min"/>
+        </LinearLayout>
+        <!-- 导航条 -->
+      <LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content">
+	     <ImageView
+	        android:id="@+id/ivw_cq_cursor"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:scaleType="matrix"
+	        android:src="@drawable/tab_cursor" /> 
+	</LinearLayout>
+    <!-- tab分页内容 -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_cq_pager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="37"
+        android:layout_gravity="center"
+        android:background="#000000"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" />
+
+</LinearLayout>

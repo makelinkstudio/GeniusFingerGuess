@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/empty_cart_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout 
+         android:id="@+id/top_ret1"
+        android:layout_width="match_parent"
+         android:layout_height="50dip"
+         android:paddingLeft="5dp"
+         android:paddingRight="5dp"
+        android:background="@drawable/top_border_style" 
+        >
+	        <ImageButton 
+		   		android:id="@+id/ibtn_shop_item_back"
+			   	android:layout_width="wrap_content" 
+			   	android:layout_height="fill_parent" 
+			   	android:src="@drawable/header_back"/>
+		  	<TextView 
+		   		android:id="@+id/tvw_shop_item_open"
+			   	android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:layout_centerVertical="true"
+				android:textColor="@color/gloden"
+				android:textSize="16dp"
+				android:text="浏览器打开"
+			   	/>
+    </RelativeLayout>
+    
+    <ProgressBar 
+        android:id="@+id/pbr_shop_item"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        style="?android:attr/progressBarStyleHorizontal" 
+        android:progressDrawable="@drawable/progressbar_style"
+        />
+    <WebView
+        android:id="@+id/wvw_shop_item_index"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </WebView>
+    <LinearLayout 
+        android:id="@+id/llt_shop_item_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:clickable="true">
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="网络异常，请点击屏幕刷新"/>
+    </LinearLayout>
+</LinearLayout>

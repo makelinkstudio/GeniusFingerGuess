@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    >
+    <!-- 左边距 -->
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.8"></LinearLayout>
+   <!-- 中间 -->
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="92.4"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical">
+    <!-- 用户名 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp" >
+        <TextView
+            android:id="@+id/tvw_topic_topicId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/tvw_topic_User"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="test"
+            style="@style/topic_title_style"/>
+    </LinearLayout>
+	 <!-- 内容 -->
+    <TextView
+        android:id="@+id/tvw_topic_Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="官方围观帖子"
+     	 style="@style/topic_con_style"/>
+    
+     <!-- 时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tvw_topic_ComTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发表于13分钟前"
+           style="@style/topic_time_style" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="·"
+            style="@style/topic_time_style" />
+
+        <TextView
+            android:id="@+id/tvw_topic_ComNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7 评论"
+            style="@style/topic_time_style"/>
+    </LinearLayout>
+    </LinearLayout>
+    <!-- 右边距 -->
+    <LinearLayout 
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3.8"></LinearLayout>
+</LinearLayout>

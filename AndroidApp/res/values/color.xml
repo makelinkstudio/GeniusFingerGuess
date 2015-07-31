@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tab_color_show">#7C7C7C</color>
+    <color name="tab_color">#ACB7C7</color>
+    <color name="tab_border">#EAEAEA</color>
+    <color name="top_color">#F8F9FB</color>
+    <color name="contentColor">#808080</color>
+    <color name="grey">#ECECEC</color>
+    <color name="white">#FFFFFF</color>
+     <color name="black">#000000</color>
+    <color name="normal">#ffffff</color>
+   <color name="gloden">#E5AB54</color>
+     <color name="listitem_black">#ff000000</color>
+     <color name="listView_bg">#F2EEEB</color>
+     <color name="listView_blue">#3B96E9</color>
+     <color name="btn_color">#000F22</color>
+     <!-- login -->
+     <color name="btn_login_color">#0D2F65</color>
+     <color name="text_color">#999999</color>
+     <!-- 猜拳 -->
+     <color name="cqMat_color">#666666</color>
+     <color name="cqmain_color">#f3f3f3</color>
+     <color name="cqbtn_color">#000f22</color>
+     <color name="cq_A_color">#f0d330</color>
+     <color name="cq_B_color">#e86970</color>
+     <color name="cq_Jian_color">#60ae94</color>
+     <color name="cq_Shi_color">#94f26a</color>
+     <color name="cq_Bu_color">#3fa2df</color>
+     <color name="cq_white_80">#C8FFFFFF</color>
+     <color name="cq_prompt_bg">#E5000000</color>
+     <!-- 商城 -->
+     <color name="shopApp_color">#ff3636</color>
+     <color name="shopCollect_color">#9D9D9D</color>
+      <color name="shopCollect_leftIntegral_color">#3B96E9</color>
+      <color name="shopImg_bottom_color">#4cffffff</color>
+     <!-- 社区 -->
+     <color name="topicCont_color">#666666</color>
+     <color name="topic_DetailCont_color">#F5F5F5</color>
+     
+     <!-- bnjz -->
+     <color name="gray">#cccccc</color>
+    <color name="light_gray">#eeeeee</color>
+    <color name="blue">#4ab5de</color>
+    <color name="green">#00c58b</color>
+    <color name="yellow">#99e900</color>
+    <color name="pink">#ff6060</color>
+    <color name="red">#821e1e</color>
+</resources>

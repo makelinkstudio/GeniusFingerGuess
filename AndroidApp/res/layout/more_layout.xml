@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="40dp" 
+    android:orientation="vertical"
+    android:gravity="center_horizontal" 
+    android:background="@color/white">
+    
+	<TextView 
+	    android:id="@+id/tvw_set_edt_userInfo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:textSize="18dp"
+	    android:text="@string/set_edt_userInfo"/>
+	
+		<TextView 
+	    android:id="@+id/tvw_set_clean"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	     android:layout_marginTop="35dp"
+	     android:textSize="18dp"
+	    android:text="@string/set_clean"/>
+		
+	<TextView 
+	    android:id="@+id/tvw_set_update"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	     android:layout_marginTop="35dp"
+	     android:textSize="18dp"
+	    android:text="@string/set_update"/>
+	
+		<TextView 
+	    android:id="@+id/tvw_set_team"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	     android:layout_marginTop="35dp"
+	     android:textSize="18dp"
+	    android:text="@string/set_team"/>
+</LinearLayout>
