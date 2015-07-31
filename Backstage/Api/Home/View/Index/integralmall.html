@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="utf-8" />
+		<title></title>
+		<link href="__PUBLIC__/css/integralmall.css" rel="stylesheet" />
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+		<script type="text/javascript">
+			 function setAppointHover(inputId){
+			     var input=document.getElementById(inputId); 
+			     input.innerHTML="已预约";
+			     input.className="good_appion appoint_active"; 
+			 }
+		 </script>
+	</head>
+
+	<body>
+		<div class="warp">
+			<volist name="adv_list" id="vo">
+				<div class="good_warp">
+					<img class="good_img" src="__PUBLIC__/img/adv_good_img/{$vo.AVD_IMG_URL}" />
+					<div class="good_info_wap">
+						<p class="good_title">{$vo.AVD_TITLE}</p>
+						<p class="good_title">由 {$vo.BUSIN_NAME} 提供</p>
+						<p class="good_integral">所需积分: <span>{$vo.AVD_INTEGRAL}</span>&nbsp;&nbsp;预约人数: <span>{$vo.APPOINT_COUNT}</span>
+						</p>
+						<div class="line"></div>
+						<if condition = "$vo.APPOINT_STATUS eq TRUE">
+							<a class="good_appion appoint_active" href="#" onclick="window.bncq.clickUserAppointment(-1)">已预约</a>
+							<else /><a id="input{$vo.AVD_ID}" class="good_appion" href="#" onclick="window.bncq.clickUserAppointment({$vo.AVD_ID})">现在预约</a>
+						</if>
+						<if condition = "$vo.COLLECT_STATUS eq TRUE">
+						<a class="good_keep" href="#" onclick="window.bncq.clickUserCollection({$vo.AVD_ID})">收藏</a>
+						<else /><a class="good_keep" href="#" onclick="window.bncq.clickUserCollection(-1)">取消收藏</a>
+						</if>
+					</div>
+				</div>
+			</volist>
+			<div class="page_btn">
+				<a class="page_perv" href="#">上一页</a>
+				<a class="page_next" href="#">下一页</a>
+			</div>
+		</div>
+	</body>
+	<script src="__PUBLIC__/js/integralmall.js"></script>
+
+</html>

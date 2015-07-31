@@ -1,0 +1,57 @@
+/*
+ * css初始化
+ */
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "microsoft yahei",arial,helvetica,sans-serif;
+	font-style: normal;	
+	font-weight: bold;
+	color: #adadad;
+}
+body{
+	background-color: #ececec;
+}
+.warp{
+}
+.good_warp{
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+}
+.good_img{
+	position: absolute;
+	display: block;
+}
+.good_info_wap{
+	position: absolute;
+	right: 0px;
+	display: block;
+}
+.good_appion{
+	color: #ff5e5e;
+	float: left;
+}
+.appoint_active{
+	color: #ddd;
+}
+.good_keep{
+	float: left;
+}
+.page_perv{
+	float: left;
+	background-color: #fff;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+.page_next{
+	float: right;
+	background-color: #fff;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+.line{
+	border-bottom: 1px solid #999999;
+}

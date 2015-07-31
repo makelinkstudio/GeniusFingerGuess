@@ -1,0 +1,368 @@
+﻿<!DOCTYPE html>  
+<html>  
+    <head>  
+        <title></title>  
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="utf-8"/>
+		<script src="__PUBLIC__/js/chart.min.js"></script>
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+		<link href='http://fonts.useso.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext' rel='stylesheet'>
+		<script type="text/javascript">
+		$.ajaxSetup({ 
+    		async : false 
+		});   
+		 //构建信息图方法
+		 $(document).ready(function(){
+			var width= document.body.clientWidth;//保持两次执行宽度数据一致
+			//第一栏
+			drawR("campRet1",width,parseInt({$A_RATE_0}),parseInt({$B_RATE_0}),null,null,null),500;//阵营
+			drawR("punRet1",width,null,null,parseInt({$JIAN_RATE_0}),parseInt({$SHI_RATE_0}),parseInt({$BU_RATE_0}));//出拳
+			//第二栏
+			drawR("campRet2",width,parseInt({$A_RATE_1}),parseInt({$B_RATE_1}),null,null,null),500;//阵营
+			drawR("punRet2",width,null,null,parseInt({$JIAN_RATE_1}),parseInt({$SHI_RATE_1}),parseInt({$BU_RATE_1}));//出拳
+			//第三栏
+			drawR("campRet3",width,parseInt({$A_RATE_2}),parseInt({$B_RATE_2}),null,null,null),500;//阵营
+			drawR("punRet3",width,null,null,parseInt({$JIAN_RATE_2}),parseInt({$SHI_RATE_2}),parseInt({$BU_RATE_2}));//出拳
+			//第四栏
+			drawR("campRet4",width,parseInt({$A_RATE_3}),parseInt({$B_RATE_3}),null,null,null),500;//阵营
+			drawR("punRet4",width,null,null,parseInt({$JIAN_RATE_3}),parseInt({$SHI_RATE_3}),parseInt({$BU_RATE_3}));//出拳
+			//第五栏
+			drawR("campRet5",width,parseInt({$A_RATE_4}),parseInt({$B_RATE_4}),null,null,null),500;//阵营
+			drawR("punRet5",width,null,null,parseInt({$JIAN_RATE_4}),parseInt({$SHI_RATE_4}),parseInt({$BU_RATE_4}));//出拳
+		 });
+		 function drawR(parDivId,width,camp_a_rate,camp_b_rate,rate_jian,rate_shi,rate_bu){
+			var campData = [
+					{value: camp_a_rate,color:"#F1C40F"},
+				    {value: camp_b_rate,color:"#E8483D"}		
+			];
+			var punData = [
+					{value: rate_jian,color:"#0F2340"},
+				    {value: rate_shi,color:"#3C9C7B"},
+				    {value: rate_bu,color:"#7CF048"}			
+			];
+			options={
+				animation:false,
+				segmentShowStroke : false
+			}
+			var data;
+			if(parDivId.substr(0,7)=="campRet"){
+				data=campData;
+			}else{
+				data=punData;
+			}
+			//生成canvas对象
+			var canvas =document.createElement("canvas");
+			canvas.setAttribute("width", width*0.4);
+			canvas.setAttribute("height", width*0.4);
+			//画图
+			var ctx = canvas.getContext("2d");
+        	var myNewChart = new Chart(ctx).Pie(data,options); 
+			var parDiv=document.getElementById(parDivId);
+			parDiv.appendChild(canvas);
+		} 
+		</script>
+		<style>
+			*{
+				font-family: "微软雅黑";
+			}
+			body{
+				margin:0;
+				padding:0;
+			}
+		    .topDiv{
+			    font-size:12px;
+				color:#666666;
+				background-color:#FFFFFF;
+				padding-left:10px;
+				padding-top:5px;
+				padding-bottom:5px;
+			}
+		    table {   
+				border-collapse:collapse;
+			} 
+			.topTitle{
+				font-size:15px;
+				color:#666666;
+				text-align:center;
+				font-weight:bold;
+				padding:10px 0 10px 0;
+			}
+			.hold_legend{
+				margin-top:10px;
+				width:60px;
+				height:60px;
+				text-align:center;
+			}
+			.r_legend{
+				width:20px;
+				height:20px;
+				background-color:#F1C40F;
+				float:left; 
+				display:inline;
+			}
+			.legend_font{
+				float:left; 
+				margin-left:5px;
+				display:inline;
+				font-size:15px;
+				font-weight:bold;
+				color:#666666;
+			}
+			.A_color{
+				background-color:#F1C40F;
+				margin-bottom: 5px;
+			}
+			.B_color{
+				background-color:#E8483D;
+				margin-bottom: 5px;
+			}
+			.J_color{
+				background-color:#0F2340;
+				margin-bottom: 5px;
+			}
+			.S_color{
+				background-color:#3C9C7B;
+				margin-bottom: 5px;
+			}
+			.BU_color{
+				background-color:#7CF048;
+				margin-bottom: 5px;
+			}
+		</style>
+    </head>  
+    <body style="background-color:#F3F3F3"> 
+    	<!--第一栏-->
+		<div class="topDiv">
+			<div>{$MAT_TIME_0} {$MAT_CODE_0}</div>
+			<div>胜利者：<?php if($WIN_CAMP_0 === '和局'){echo $WIN_CAMP_0;}else{echo $WIN_CAMP_0.'-'.$WIN_PUNCH_0;} ?></div>
+		</div>
+    	<table>
+			<tr>
+				<td rowspan="3" width="5%"></td>
+				<td><div class="topTitle">阵营分布图</div></td>
+				<td rowspan="3" width="10%"></td>
+				<td><div class="topTitle">动作分布图</div></td>
+				<td rowspan="3" width="5%"></td>
+			</tr>
+			<tr>
+				<td><div id="campRet1" ></div></td>
+				<td><div id="punRet1" ></div></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend A_color"></div>
+						<div class="legend_font">A</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend B_color"></div>
+						<div class="legend_font">B</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend J_color"></div>
+						<div class="legend_font">剪刀</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend S_color"></div>
+						<div class="legend_font">石头</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+					    <div class="r_legend BU_color"></div>
+						<div class="legend_font">布</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<!--第二栏-->
+		<div class="topDiv">
+			<div>{$MAT_TIME_1} {$MAT_CODE_1}</div>
+			<div>胜利者：<?php if($WIN_CAMP_1 === '和局'){echo $WIN_CAMP_1;}else{echo $WIN_CAMP_1.'-'.$WIN_PUNCH_1;} ?></div>
+		</div>
+    	<table>
+			<tr>
+				<td rowspan="3" width="5%"></td>
+				<td><div class="topTitle">阵营分布图</div></td>
+				<td rowspan="3" width="10%"></td>
+				<td><div class="topTitle">动作分布图</div></td>
+				<td rowspan="3" width="5%"></td>
+			</tr>
+			<tr>
+				<td><div id="campRet2" ></div></td>
+				<td><div id="punRet2" ></div></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend A_color"></div>
+						<div class="legend_font">A</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend B_color"></div>
+						<div class="legend_font">B</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend J_color"></div>
+						<div class="legend_font">剪刀</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend S_color"></div>
+						<div class="legend_font">石头</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+					    <div class="r_legend BU_color"></div>
+						<div class="legend_font">布</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<!--第三栏-->
+		<div class="topDiv">
+			<div>{$MAT_TIME_2} {$MAT_CODE_2}</div>
+			<div>胜利者：<?php if($WIN_CAMP_2 === '和局'){echo $WIN_CAMP_2;}else{echo $WIN_CAMP_2.'-'.$WIN_PUNCH_2;} ?></div>
+		</div>
+    	<table>
+			<tr>
+				<td rowspan="3" width="5%"></td>
+				<td><div class="topTitle">阵营分布图</div></td>
+				<td rowspan="3" width="10%"></td>
+				<td><div class="topTitle">动作分布图</div></td>
+				<td rowspan="3" width="5%"></td>
+			</tr>
+			<tr>
+				<td><div id="campRet3" ></div></td>
+				<td><div id="punRet3" ></div></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend A_color"></div>
+						<div class="legend_font">A</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend B_color"></div>
+						<div class="legend_font">B</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend J_color"></div>
+						<div class="legend_font">剪刀</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend S_color"></div>
+						<div class="legend_font">石头</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+					    <div class="r_legend BU_color"></div>
+						<div class="legend_font">布</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<!--第四栏-->
+		<div class="topDiv">
+			<div>{$MAT_TIME_3} {$MAT_CODE_3}</div>
+			<div>胜利者：<?php if($WIN_CAMP_3 === '和局'){echo $WIN_CAMP_3;}else{echo $WIN_CAMP_3.'-'.$WIN_PUNCH_3;} ?></div>
+		</div>
+    	<table>
+			<tr>
+				<td rowspan="3" width="5%"></td>
+				<td><div class="topTitle">阵营分布图</div></td>
+				<td rowspan="3" width="10%"></td>
+				<td><div class="topTitle">动作分布图</div></td>
+				<td rowspan="3" width="5%"></td>
+			</tr>
+			<tr>
+				<td><div id="campRet4" ></div></td>
+				<td><div id="punRet4" ></div></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend A_color"></div>
+						<div class="legend_font">A</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend B_color"></div>
+						<div class="legend_font">B</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend J_color"></div>
+						<div class="legend_font">剪刀</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend S_color"></div>
+						<div class="legend_font">石头</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+					    <div class="r_legend BU_color"></div>
+						<div class="legend_font">布</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+		
+		<!--第五栏-->
+		<div class="topDiv">
+			<div>{$MAT_TIME_4} {$MAT_CODE_4}</div>
+			<div>胜利者：<?php if($WIN_CAMP_4 === '和局'){echo $WIN_CAMP_4;}else{echo $WIN_CAMP_4.'-'.$WIN_PUNCH_4;} ?></div>
+		</div>
+    	<table>
+			<tr>
+				<td rowspan="3" width="5%"></td>
+				<td><div class="topTitle">阵营分布图</div></td>
+				<td rowspan="3" width="10%"></td>
+				<td><div class="topTitle">动作分布图</div></td>
+				<td rowspan="3" width="5%"></td>
+			</tr>
+			<tr>
+				<td><div id="campRet5" ></div></td>
+				<td><div id="punRet5" ></div></td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend A_color"></div>
+						<div class="legend_font">A</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend B_color"></div>
+						<div class="legend_font">B</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend J_color"></div>
+						<div class="legend_font">剪刀</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+						<div class="r_legend S_color"></div>
+						<div class="legend_font">石头</div>
+						<div style="clear:both;margin-bottom:10px"></div>
+						
+					    <div class="r_legend BU_color"></div>
+						<div class="legend_font">布</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+    </body>  
+</html>  

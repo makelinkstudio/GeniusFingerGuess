@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<title>爆脑猜拳管理后台</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="__PUBLIC__/css/templatemo_main.css">
+</head>
+
+<body>
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<div class="logo">
+				<h1>爆脑猜拳后台管理</h1>
+			</div>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+	</div>
+	<div class="template-page-wrapper">
+		<div class="navbar-collapse collapse templatemo-sidebar">
+			<ul class="templatemo-sidebar-menu">
+				<li>
+					<form class="navbar-form">
+						<input type="text" class="form-control" id="templatemo_search_box" placeholder="搜索">
+						<span class="btn btn-default">Go</span>
+					</form>
+				</li>
+				<li class="active"><a href="#"><i class="fa fa-home"></i>信息概览</a>
+				</li>
+				<li class="sub">
+					<a href="javascript:;">
+						<i class="fa fa-database"></i>用户管理
+						<div class="pull-right"><span class="caret"></span>
+						</div>
+					</a>
+					<ul class="templatemo-submenu">
+						<li><a href="#">caiquan</a>
+						</li>
+						<li><a href="#">Pellentesque</a>
+						</li>
+						<li><a href="#">Congue</a>
+						</li>
+						<li><a href="#">Interdum</a>
+						</li>
+						<li><a href="#">Facilisi</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="data-visualization.html"><i class="fa fa-cubes"></i>猜拳管理</a>
+				</li>
+				<li><a href="maps.html"><i class="fa fa-map-marker"></i>社区管理</a>
+				</li>
+				<li><a href="tables.html"><i class="fa fa-users"></i>兑换管理</a>
+				</li>
+				<li><a href="preferences.html"><i class="fa fa-cog"></i>系统设置</a>
+				</li>
+				<li><a href="__URL__/dologout"><i class="fa fa-sign-out"></i>退出登录</a>
+				</li>
+			</ul>
+		</div>
+		<!--/.navbar-collapse -->
+
+		<div class="templatemo-content-wrapper">
+			<div class="templatemo-content">
+				<ol class="breadcrumb">
+					<li><a href="index.html">爆脑猜拳管理后台</a>
+					</li>
+					<li><a href="#" class="active">概要信息</a>
+					</li>
+				</ol>
+				<!--用户信息-->
+				<h1>用户信息概要</h1>
+				<div class="margin-bottom-30">
+					<div class="row">
+						<div class="col-md-12 col-sm-12">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#">注册用户量<span class="badge">{$user_sum.TOTAL_USER_COUNT}</span></a>
+								</li>
+								<li class="active"><a href="#">当前活跃用户人数<span class="badge">{$user_sum.ACTIVE_USER_COUNT}</span></a>
+								</li>
+								<li class="active"><a href="#">系统总积分<span class="badge">{$user_sum.TOTAL_INTEGRAL}</span></a>
+								</li>
+								<li class="active"><a href="#">累计总登录<span class="badge">{$user_sum.TOTAL_LOGIN_COUNT}</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div><!--用户信息结束-->
+				<!--猜拳信息-->
+				<h1>猜拳信息概要</h1>
+				<div class="margin-bottom-30">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#">累计参与人数<span class="badge">{$punch_sum.USER_PUNCH_COUNT}</span></a>
+								</li>
+								<li class="active"><a href="#">累计投入总积分<span class="badge">{$punch_sum.TOTAL_INPUT_INTEGRAL}</span></a>
+								</li>
+								<li class="active"><a href="#">人均参与次数<span class="badge">{$punch_sum.AVD_PUNCH_COUNT}</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--猜拳信息结束-->
+				<!--话题信息-->
+				<h1>话题信息概要</h1>
+				<div class="margin-bottom-30">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#">累计话题数<span class="badge">{$topic_sum.TOTAL_TOPIC_COUNT}</span></a>
+								</li>
+								<li class="active"><a href="#">累计回复<span class="badge">{$topic_sum.TOTAL_REPLY_COUNT}</span></a>
+								</li>
+								<li class="active"><a href="#">当日话题总数<span class="badge">{$topic_sum.TODAY_TOPIC_COUNT}</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--话题信息结束-->
+				<!--兑换信息-->
+				<h1>兑换信息概要</h1>
+				<div class="margin-bottom-30">
+					<div class="row">
+						<div class="col-md-12">
+							<ul class="nav nav-pills">
+								<li class="active"><a href="#">合作商家数<span class="badge">{$adv_sum.TOTAL_ADV_COUNT}</span></a>
+								</li>
+								<li class="active"><a href="#">累计兑换总数<span class="badge">{$adv_sum.TOTAL_LUCK_COUNT}</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--兑换信息结束-->
+			</div>
+		</div>
+
+		<footer class="templatemo-footer navbar-fixed-bottom">
+			<div class="templatemo-copyright">
+				<p>Copyright &copy; 2015 BNCQ <a href="#" target="_blank">爆脑猜拳</a>
+				</p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/js/chart.min.js"></script>
+	<script src="__PUBLIC__/js/templatemo_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" charset="utf-8" />
+		<script src="__PUBLIC__/js/chart.min.js"></script>
+		<script src="__PUBLIC__/js/jquery.min.js"></script>
+		<script type="text/javascript">
+			 //构建信息图方法
+			$(document).ready(function() {
+				var width = document.body.clientWidth; //保持两次执行宽度数据一致
+				drawR("campRet",width,parseInt({$A_RATE}),parseInt({$B_RATE}),null,null,null),500;//阵营
+				drawR("punRet",width,null,null,parseInt({$JIAN_RATE}),parseInt({$SHI_RATE}),parseInt({$BU_RATE}));//出拳
+			});
+			function drawR(parDivId, width, camp_a_rate, camp_b_rate, rate_jian, rate_shi, rate_bu) {
+				if(camp_a_rate == 0 && camp_b_rate == 0){
+					var campData = [
+					{value: 100,color: "#dddddd"
+					}
+					];
+				}else{
+					var campData = [
+					{value: camp_a_rate,color: "#F1C40F"
+					}, 
+					{value: camp_b_rate,color: "#E8483D"}
+					];
+				}
+				if(rate_jian == 0 && rate_shi == 0 && rate_bu == 0){
+					var punData = [
+					{value: 100,color: "#dddddd"
+					}
+					];
+				}else{
+					var punData = [
+					{value: rate_jian,
+					 color: "#0F2340"},
+					{value: rate_shi,
+					 color: "#3C9C7B"},
+					{value: rate_bu,
+					 color: "#7CF048"}
+					];
+				}
+				options = {
+					animation: false,
+					segmentShowStroke: false
+				}
+				var data;
+				if (parDivId == "campRet") {
+					data = campData;
+				} else {
+					data = punData;
+				}
+				//生成canvas对象
+				var canvas = document.createElement("canvas");
+				canvas.setAttribute("width", width*0.4);
+				canvas.setAttribute("height", width*0.4);
+				//画图
+				var ctx = canvas.getContext("2d");
+				var myNewChart = new Chart(ctx).Pie(data, options);
+				var parDiv = document.getElementById(parDivId);
+				parDiv.appendChild(canvas);
+			}
+		</script>
+		<style>
+			*{
+				font-family: "Microsoft YaHei Light";
+			}
+			body{
+				margin:0;
+				padding:0;
+			}
+			table {   
+					border-collapse:collapse;
+				} 
+				.topTitle{
+					font-size:15px;
+					color:#666666;
+					text-align:center;
+					font-weight:bold;
+					padding:10px 0 10px 0;
+				}
+				.hold_legend{
+					margin-top:10px;
+					width:60px;
+					height:60px;
+					text-align:center;
+				}
+				.r_legend{
+					width:20px;
+					height:20px;
+					background-color:#F1C40F;
+					float:left; 
+					display:inline;
+				}
+				.legend_font{
+					float:left; 
+					margin-left:5px;
+					display:inline;
+					font-size:15px;
+					font-weight:bold;
+					color:#666666;
+				}
+				.A_color{
+					background-color:#F1C40F;
+					margin-bottom: 5px;
+				}
+				.B_color{
+					background-color:#E8483D;
+					margin-bottom: 5px;
+				}
+				.J_color{
+					background-color:#0F2340;
+					margin-bottom: 5px;
+				}
+				.S_color{
+					background-color:#3C9C7B;
+					margin-bottom: 5px;
+				}
+				.BU_color{
+					background-color:#7CF048;
+					margin-bottom: 5px;
+				}
+		</style>
+	</head>
+	<body style="background-color:#F3F3F3">
+		<table>
+			<tr>
+				<td rowspan="3" width="5%"></td>
+				<td>
+					<div class="topTitle">阵营分布图</div>
+				</td>
+				<td rowspan="3" width="10%"></td>
+				<td>
+					<div class="topTitle">动作分布图</div>
+				</td>
+				<td rowspan="3" width="5%"></td> 
+			</tr>
+			<tr>
+				<td>
+					<div id="campRet"></div>
+				</td>
+				<td>
+					<div id="punRet"></div>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend A_color"></div>
+						<div class="legend_font">A</div>
+						<div style="clear:both;"></div>
+
+						<div class="r_legend B_color"></div>
+						<div class="legend_font">B</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+				<td align="center">
+					<div class="hold_legend">
+						<div class="r_legend J_color"></div>
+						<div class="legend_font">剪刀</div>
+						<div style="clear:both;"></div>
+
+						<div class="r_legend S_color"></div>
+						<div class="legend_font">石头</div>
+						<div style="clear:both;"></div>
+
+						<div class="r_legend BU_color"></div>
+						<div class="legend_font">布</div>
+						<div style="clear:both"></div>
+					</div>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>

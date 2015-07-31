@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+	<title>爆脑猜拳管理后台</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="__PUBLIC__/css/templatemo_main.css">
+</head>
+
+<body>
+	<div class="navbar navbar-inverse" role="navigation">
+		<div class="navbar-header">
+			<div class="logo">
+				<h1>爆脑猜拳后台管理</h1>
+			</div>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+	</div>
+	<div class="template-page-wrapper">
+		<div class="navbar-collapse collapse templatemo-sidebar">
+			<ul class="templatemo-sidebar-menu">
+				<li>
+					<form class="navbar-form">
+						<input type="text" class="form-control" id="templatemo_search_box" placeholder="搜索">
+						<span class="btn btn-default">Go</span>
+					</form>
+				</li>
+				<li class="active"><a href="#"><i class="fa fa-home"></i>信息概览</a>
+				</li>
+				<li><a href="#"><i class="fa fa-cubes"></i>用户管理</a>
+				</li>
+				<li><a href="#"><i class="fa fa-cubes"></i>猜拳管理</a>
+				</li>
+				<li><a href="#"><i class="fa fa-map-marker"></i>社区管理</a>
+				</li>
+				<li><a href="#"><i class="fa fa-users"></i>兑换管理</a>
+				</li>
+				<li><a href="#"><i class="fa fa-cog"></i>系统设置</a>
+				</li>
+				<li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>退出登录</a>
+				</li>
+			</ul>
+		</div>
+		<!--/.navbar-collapse -->
+
+		<div class="templatemo-content-wrapper">
+			<div class="templatemo-content">
+				<ol class="breadcrumb">
+					<li><a href="index.html">爆脑猜拳管理后台</a>
+					</li>
+					<li><a href="#" class="active">登录</a>
+					</li>
+				</ol>
+				<h1>管理员登录</h1>
+				<p class="margin-bottom-15">输入正确管理员账号密码</p>
+				<div class="row">
+					<div class="col-md-12">
+						<form role="form" id="templatemo-preferences-form" method="post" action="__URL__/dologin">
+							<div class="row">
+								<div class="col-md-6 margin-bottom-15">
+									<label for="firstName" class="control-label">账号</label>
+									<input class="form-control" id="admin_name" name="admin"type="text">
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 margin-bottom-15">
+									<label for="password_1">密码</label>
+									<input class="form-control" id="password" name="passwd"type="password">
+								</div>
+							</div>
+							<div class="row templatemo-form-buttons">
+								<div class="col-md-12">
+									<button type="submit" class="btn btn-primary">登录</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="templatemo-footer navbar-fixed-bottom">
+			<div class="templatemo-copyright">
+				<p>Copyright &copy; 2015 BNCQ <a href="#" target="_blank">爆脑猜拳</a>
+				</p>
+			</div>
+		</footer>
+	</div>
+
+	<script src="__PUBLIC__/js/jquery.min.js"></script>
+	<script src="__PUBLIC__/js/bootstrap.min.js"></script>
+	<script src="__PUBLIC__/js/chart.min.js"></script>
+	<script src="__PUBLIC__/js/templatemo_script.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#admin_name").focus(function(){
+				$("#admin_name").val('');
+			});
+			$("#password").focus(function(){
+				$("#password").val('');
+			});
+		});
+	</script>
+</body>
+
+</html>
